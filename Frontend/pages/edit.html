@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Transaction</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="transaction">
+            <h3>Update Transaction</h3>
+
+            <div class="type-group" id="type">
+                <label>
+                    <input type="radio" name="type" value="Income">
+                    Income
+                </label>
+                <label>
+                    <input type="radio" name="type" value="expense">
+                    Expense
+                </label>
+            </div>
+
+            <select id="category">
+                <option value="">Select Category</option>
+                <option>Food</option>
+                <option>Shopping</option>
+                <option>Salary</option>
+                <option>Travel</option>
+                <option>Health</option>
+                <option>Entertainment</option>
+                <option>Investment</option>
+                <option>Bills</option>
+                <option>Freelancing</option>
+                <option>Education</option>
+                <option>Other</option>
+            </select>
+
+            <input type="number" id="amount" placeholder="Enter Amount">
+            <input type="date" id="date">
+            <textarea id="description" placeholder="Enter Description"></textarea>
+
+            <button id="updateTransactionBtn">Update Transaction</button>
+        </div>
+    </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
