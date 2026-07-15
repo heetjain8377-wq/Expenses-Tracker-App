@@ -12,7 +12,7 @@ if (!token) {
 async function loadDashboard() {
   
 
-    const response = await fetch("http://localhost:5000/api/transaction/dashboard", {
+    const response = await fetch("https://expenses-tracker-app-ridu.onrender.com/api/transaction/dashboard", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ if(addTransactionBtn){
     try {
         const token = localStorage.getItem("token");
 
-        const response = await fetch("http://localhost:5000/api/transaction/create-transaction", {
+        const response = await fetch("https://expenses-tracker-app-ridu.onrender.com/api/transaction/create-transaction", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -137,7 +137,7 @@ async function getTransactions() {
     try {
         const token = localStorage.getItem("token");
 
-        const response = await fetch("http://localhost:5000/api/transaction/", {
+        const response = await fetch("https://expenses-tracker-app-ridu.onrender.com/api/transaction/", {
             method: "GET",
             headers: { Authorization: `Bearer ${token}` }
         })
@@ -187,7 +187,7 @@ async function deleteTransaction(id) {
         const token = localStorage.getItem("token");
         // const id = localStorage.getItem("editId");
 
-        const response = await fetch(`http://localhost:5000/api/transaction/delete-transaction/${id}`, {
+        const response = await fetch(`https://expenses-tracker-app-ridu.onrender.com/api/transaction/delete-transaction/${id}`, {
             method: "DELETE",
             headers: { Authorization: `Bearer ${token}` }
         })
@@ -221,7 +221,7 @@ if(updateTransactionBtn){
     const transactionDate = document.getElementById("date").value;
 
     try{
-        const response = await fetch(`http://localhost:5000/api/transaction/update-transaction/${id}`,{
+        const response = await fetch(`https://expenses-tracker-app-ridu.onrender.com/api/transaction/update-transaction/${id}`,{
             method : "PUT",
             headers : {
                 "Content-Type":"application/json",

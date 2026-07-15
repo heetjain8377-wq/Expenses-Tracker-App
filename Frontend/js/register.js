@@ -6,7 +6,7 @@ registerBtn.addEventListener("click",async () => {
     const password = document.getElementById("password").value;
     const phoneNumber = document.getElementById("phoneNumber").value;
 
-    const response = await fetch("http://localhost:5000/api/auth/register",{
+    const response = await fetch("https://expenses-tracker-app-ridu.onrender.com/api/auth/register",{
         method : "POST",
         headers : {"Content-Type":"application/json"},
         body : JSON.stringify({
