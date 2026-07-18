@@ -1,5 +1,5 @@
 const loginBtn = document.getElementById("loginBtn");
-const loaderContainer = document.getElementById("loaderContainer");
+const loaderContainer = document.querySelector(".loaderContainer");
 
 loginBtn.addEventListener("click",async () => {
 

@@ -1,5 +1,5 @@
 const registerBtn = document.getElementById("registerBtn");
-const loaderContainer = document.getElementById("loaderContainer");
+const loaderContainer = document.querySelector(".loaderContainer");
 
 registerBtn.addEventListener("click",async () => {
 
