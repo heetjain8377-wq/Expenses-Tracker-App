@@ -296,7 +296,7 @@ tr:hover{
 
 .loader{
     width: 40%;
-    height: 50vh;
+    height: 30vh;
     background-color: white;
     border-radius: 18px;
     display: flex;
