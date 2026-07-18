@@ -1,6 +1,13 @@
 const registerBtn = document.getElementById("registerBtn");
+const loaderContainer = document.getElementById("loaderContainer");
 
 registerBtn.addEventListener("click",async () => {
+
+    loaderContainer.style.display = "flex";
+    registerBtn.disabled = true;
+    registerBtn.style.opacity = "0.7";
+    registerBtn.style.cursor = "not-allowed";
+
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -18,6 +25,11 @@ registerBtn.addEventListener("click",async () => {
     });
 
     const data = await response.json();
+
+    loaderContainer.style.display = "none";
+    registerBtn.disabled = false;
+    registerBtn.style.opacity = "1";
+    registerBtn.style.cursor = "pointer";
 
     if(data.ok){
         alert(data.message);

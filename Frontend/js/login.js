@@ -1,6 +1,13 @@
 const loginBtn = document.getElementById("loginBtn");
+const loaderContainer = document.getElementById("loaderContainer");
 
 loginBtn.addEventListener("click",async () => {
+
+    loaderContainer.style.display = "flex";
+    loginBtn.disabled = true;
+    loginBtn.style.opacity = "0.7";
+    loginBtn.style.cursor = "not-allowed";
+
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
@@ -14,6 +21,11 @@ loginBtn.addEventListener("click",async () => {
     });
 
     const data = await response.json();
+
+    loaderContainer.style.display = "none";
+    loginBtn.disabled = false;
+    loginBtn.style.opacity = "1";
+    loginBtn.style.cursor = "pointer";
 
     localStorage.setItem("token", data.token);
 
