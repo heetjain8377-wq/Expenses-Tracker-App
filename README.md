@@ -91,7 +91,6 @@ Through this project, I practised building a financial tracking interface, manag
 
 - Add date-range filtering.
 - Export transaction records to CSV.
-- Improve accessibility and keyboard navigation.
 - Add more detailed financial insights and reporting.
 
 ## Author
