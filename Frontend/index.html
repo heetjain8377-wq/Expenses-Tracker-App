@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F92LW19KJ7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-F92LW19KJ7');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="pefJBF8nuPNK9_aMS35-JVFYUp2tRPTS-jf8DOqVtpM" />
     <title>Register</title>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
+
 <body>
     <div class="container">
         <input type="text" id="name" placeholder="Enter Name" required>
         <input type="email" id="email" placeholder="Enter Email" required>
         <input type="password" id="password" placeholder="Enter Password" required>
         <input type="number" id="phoneNumber" placeholder="Enter Phone Number" maxlength="10" required>
-        
+
         <button id="registerBtn">Register</button>
 
         <p>Already have an account?<a href="login.html">Login</a></p>
@@ -28,4 +39,5 @@
 
     <script src="js/register.js"></script>
 </body>
+
 </html>
